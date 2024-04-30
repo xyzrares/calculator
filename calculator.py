@@ -1,6 +1,3 @@
-# Test the functions with different inputs to ensure accuracy.
-# Use try blocks to handle errors like division by zero.
-
 def addition(a, b):
     return a + b 
     
