@@ -1,3 +1,5 @@
+from time import sleep
+
 def addition(a, b):
     return a + b 
     
@@ -31,13 +33,14 @@ def main():
     print(f"Well, hello, there, {user}!")
     
     answer = input("Do ya wanna watch me solve some quantum physics?(Y/N): ")
-    if answer.lower() == y:
+    if answer.lower() == "y":
         print("Well, too bad, cowboy! This ain't nun but a calculator. It ain't much but it's honest work, y'know...")
-    elif answer.lower() == n:
+    elif answer.lower() == "n":
         print("Didn't wanna show it to ya, anyways...")
         for i in range(3, 0, -1):
-            print(f"The program will closed in {i} seconds...")
-            
+            print(f"The program will close in {i} seconds...")
+            sleep(1)
+        return exit()
     while True: 
         try:         
             a = float(input("What's the first number, cowboy?: "))
