@@ -12,31 +12,19 @@ def power(a, b):
     return a ** b
 
 def division(a, b):
-    try:
-        c = a / b
-        if b == 0:
-            raise ValueError("You cannot divide by 0, cowboy.")
-    except ValueError as e: 
-        print(e)
-    return c
+    if b == 0: 
+        raise ValueError("You cannot divide by 0, cowboy.")
+    return a / b
 
 def floor_division(a, b):
-    try:
-        c = a // b
-        if b == 0:
-            raise ValueError("You cannot divide by 0, cowboy.")
-    except ValueError as e: 
-        print(e)
-    return c
+    if b == 0: 
+        raise ValueError("You cannot divide by 0, cowboy.")
+    return a // b
 
 def modulus(a, b):
-    try:
-        c = a % b
-        if b == 0:
-            raise ValueError("You cannot divide by 0, cowboy.")
-    except ValueError as e: 
-        print(e)
-    return c
+    if b == 0: 
+        raise ValueError("You cannot divide by 0, cowboy.")
+    return a % b
 
 def main():
     user = input("How should I call you, big boi?: ")
@@ -48,8 +36,8 @@ def main():
     elif answer.lower() == n:
         print("Didn't wanna show it to ya, anyways...")
         
-    a = input("What's the first number, cowboy?: ")
-    b = input("Ya need a second one if you want to use me: ")
+    a = float(input("What's the first number, cowboy?: "))
+    b = float(input("Ya need a second one if you want to use me: "))
     operation = input("What do you want to know, big boi?: ")
     if operation.lower() == "addition" or operation.lower() == "+":
         c = addition(a, b)
